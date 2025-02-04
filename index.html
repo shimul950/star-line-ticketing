@@ -1,12 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Line Paribahan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Line Paribahan</title>
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- daisyui link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font awsome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      font-family: "Raleway", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+
+    .rounded-reverse {
+      border-radius: 50%;
+      transform: rotate(180deg);
+      overflow: hidden;
+    }
+  </style>
+
+
 </head>
+
 <body>
-    <h1>hello</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sunt esse eos magnam ullam ipsa repudiandae? Porro quibusdam ut cumque assumenda dolores, maxime impedit est quidem debitis corrupti incidunt adipisci.</p>
+  <header class="mx-24">
+    <nav>
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Home</a></li>
+              <li>
+                <a>About</a>
+              </li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-4xl font-bold">Star Line</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li>
+              <a>About</a>
+            </li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn  border-[#09d72b] text-[#09d72b]">Bus <i class="fa-solid fa-bus"
+              style="color: #09d72b;"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero bg-[url(images/banner.png)] min-h-screen my-10 rounded-xl">
+      <div class="hero-content text-center">
+        <div>
+          <h1 class="text-5xl font-bold text-white">End-to-End Travel with <br> <span class="text-[#09d72b]">Star Line
+              Paribahan</span></h1>
+          <p class="py-8 px-24 text-slate-200">
+            Yes, you can run unit tests and view the results directly within the app. The integrated testing features
+            allow for a streamlined .
+          </p>
+          <button class="btn bg-[#09d72b] font-bold">Buy Tickets</button>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <section class="mx-24">
+    <h1 class="text-4xl font-bold text-center my-20">Best offers for you</h1>
+    <!-- coupon container -->
+    <div class="flex w-full flex-col lg:flex-row mb-8 gap-10 ">
+      <!-- 15% off coupon -->
+      <div class=" bg-yellow-300 rounded-box flex justify-around p-8 h-32 w-full place-items-center">
+        <div>
+          <h1 class="text-4xl font-bold">15% off</h1>
+          <p class="font-bold text-slate-600">On your next purchase</p>
+        </div>
+        <div class="divider divider-horizontal"></div>
+        <div>
+          <h1 class="text-4xl font-bold">NEW15</h1>
+          <p class="font-bold text-slate-600">Coupon Code</p>
+        </div>
+      </div>
+      <!-- 20% off coupon -->
+      <div class=" bg-pink-300 rounded-box flex justify-around p-8 h-32 w-full place-items-center">
+        <div>
+          <h1 class="text-4xl font-bold">20% off</h1>
+          <p class="font-bold text-slate-600">On your next purchase</p>
+        </div>
+        <div class="divider divider-horizontal"></div>
+        <div>
+          <h1 class="text-4xl font-bold">Couple20</h1>
+          <p class="font-bold text-slate-600">Coupon Code</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center my-20">
+      <button class="btn border-[#09d72b] text-[#09d72b]">See all offers</button>
+    </div>
+  </section>
+
+  <main class="border-t-2 border-[#09d72b] bg-slate-100 ">
+    <!-- route and price confirmation section -->
+    <section class="m-24">
+      <h1 class="text-4xl font-bold text-center">Star Line Paribahan</h1>
+      <p class="text-slate-500 text-center my-8 ">Yes, you can run unit tests and view the results directly within the
+        app. <br> The integrated testing features allow for a streamlined .</p>
+      <!-- route selection container-->
+      <div class="flex bg-white p-10  rounded-xl ">
+        <!-- route div -->
+        <div class="grow">
+          <div class="flex justify-between">
+            <div>
+              <h3 class="text-2xl font-bold">Star Line Paribahan</h3>
+              <p class="text-slate-500 ">Coach-009-WEB ! AC_Business</p>
+            </div>
+            <button class="btn  border-[#09d72b] text-[#09d72b]"> <i class="fa-solid fa-bus"
+              style="color: #09d72b;"> 40 seats left</i></button>
+          </div>
+          <div class="my-8 bg-slate-100 p-10 rounded-xl">
+            <input type="text" placeholder="Route" class="border-b-2 p-5 border-dashed rounded-xl w-1/2"><br>
+            <input type="text" placeholder="Departure Time" class="border-b-2 p-5 rounded-xl border-dashed w-1/2 my-8" name="" id="">
+            <div class="flex justify-around">
+              <div class="bg-gray-200 p-5 rounded-lg">Boarding Point - Laxmipur</div>
+              <div class="bg-gray-200 p-5 rounded-lg">Dropping Point - Bogura</div>
+              <div class="bg-gray-200 p-5 rounded-lg">Est. Time - 11 Hour</div>
+            </div>
+          </div>
+        </div>
+        <!-- divider div -->
+        <div class="divider divider-horizontal "></div>
+        <!-- ticket price -->
+        <div class="text-center grow-2/3">
+          <i class="fa-sharp-duotone m-8  fa-solid fa-bangladeshi-taka-sign fa-beat fa-2xl" style="color: #09d72b;"></i>
+          <h1 class="text-5xl font-bold">550 Taka</h1>
+          <p class="text-slate-500">Per Seat</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- seat selection section -->
+    <section class="bg-white mx-24">
+
+    </section>   
+
+
+
+
+    
+  </main>
 </body>
+
 </html>
