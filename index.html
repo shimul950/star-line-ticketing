@@ -96,24 +96,24 @@
     <!-- coupon container -->
     <div class="flex w-full flex-col lg:flex-row mb-8 gap-10 ">
       <!-- 15% off coupon -->
-      <div class=" bg-yellow-300 rounded-box flex justify-around p-8 h-32 w-full place-items-center">
+      <div class=" bg-yellow-400 rounded-box flex justify-around p-8 h-48 items-center w-full ">
         <div>
           <h1 class="text-4xl font-bold">15% off</h1>
           <p class="font-bold text-slate-600">On your next purchase</p>
         </div>
-        <div class="divider divider-horizontal"></div>
+        <div> <img src="images/cupon-devider.png"  alt=""></div>
         <div>
           <h1 class="text-4xl font-bold">NEW15</h1>
           <p class="font-bold text-slate-600">Coupon Code</p>
         </div>
       </div>
       <!-- 20% off coupon -->
-      <div class=" bg-pink-300 rounded-box flex justify-around p-8 h-32 w-full place-items-center">
+      <div class=" bg-pink-400 rounded-box flex justify-around p-8 h-48 items-center w-full ">
         <div>
           <h1 class="text-4xl font-bold">20% off</h1>
           <p class="font-bold text-slate-600">On your next purchase</p>
         </div>
-        <div class="divider divider-horizontal"></div>
+        <div> <img src="images/cupon-devider.png"  alt=""></div>
         <div>
           <h1 class="text-4xl font-bold">Couple20</h1>
           <p class="font-bold text-slate-600">Coupon Code</p>
@@ -126,7 +126,7 @@
     </div>
   </section>
 
-  <main class="border-t-2 border-[#09d72b] bg-slate-100 ">
+  <main class="border-t-2 border-[#09d72b] bg-slate-100 pb-24">
     <!-- route and price confirmation section -->
     <section class="m-24">
       <h1 class="text-4xl font-bold text-center">Star Line Paribahan</h1>
@@ -141,12 +141,12 @@
               <h3 class="text-2xl font-bold">Star Line Paribahan</h3>
               <p class="text-slate-500 ">Coach-009-WEB ! AC_Business</p>
             </div>
-            <button class="btn  border-[#09d72b] text-[#09d72b]"> <i class="fa-solid fa-bus"
-              style="color: #09d72b;"> 40 seats left</i></button>
+            <button class="btn  border-[#09d72b] text-[#09d72b]"> <i class="fa-solid fa-bus" style="color: #09d72b;"> 40 seats left</i></button>
           </div>
           <div class="my-8 bg-slate-100 p-10 rounded-xl">
             <input type="text" placeholder="Route" class="border-b-2 p-5 border-dashed rounded-xl w-1/2"><br>
-            <input type="text" placeholder="Departure Time" class="border-b-2 p-5 rounded-xl border-dashed w-1/2 my-8" name="" id="">
+            <input type="text" placeholder="Departure Time" class="border-b-2 p-5 rounded-xl border-dashed w-1/2 my-8"
+              name="" id="">
             <div class="flex justify-around">
               <div class="bg-gray-200 p-5 rounded-lg">Boarding Point - Laxmipur</div>
               <div class="bg-gray-200 p-5 rounded-lg">Dropping Point - Bogura</div>
@@ -159,7 +159,7 @@
         <!-- ticket price -->
         <div class="text-center grow-2/3 flex justify-center items-center flex-col">
           <i class="fa-sharp-duotone m-8  fa-solid fa-bangladeshi-taka-sign fa-beat fa-2xl" style="color: #09d72b;"></i>
-          <h1 class="text-5xl font-bold">550 Taka</h1>
+          <h1 class="text-4xl font-bold">550 Taka</h1>
           <p class="text-slate-500">Per Seat</p>
         </div>
 
@@ -167,28 +167,174 @@
     </section>
 
     <!-- seat selection section -->
-    <section class="bg-white mx-24 pt-2 rounded-xl">
-      <!-- seat position container div -->
-      <div class="m-10">
-        <h3 class="text-2xl font-bold">Select Your Seat</h3>
-        <div class="flex justify-between border-b-2 border-dashed my-5">
-          <div class="font-bold "><i class="fa-solid fa-chair pr-2"></i>  Available</div>
-          <div class="text-[#09d72b] font-bold"><i class="fa-solid fa-chair pr-2 " style="color: #14e121;"></i>  Selecter</div>
+    <section class="bg-white mx-24 pt-2 rounded-xl grid grid-cols-3 py-10">
+      <!-- seating container div -->
+      <div class="col-span-2 border-r-2 border-dashed">
+        <!-- available seat indicator div -->
+        <div class="m-10">
+          <h3 class="text-2xl font-bold">Select Your Seat</h3>
+          <div class="flex justify-between border-b-2 border-dashed my-5 pb-2">
+            <div class="font-bold "><i class="fa-solid fa-chair pr-2"></i> Available</div>
+            <div class="text-[#09d72b] font-bold"><i class="fa-solid fa-chair pr-2 " style="color: #14e121;"></i>
+              Selected</div>
+          </div>
         </div>
-      </div> 
 
-      <!------------------- seats------------------ -->
-      <div class="flex justify-end">
-        <div class="h-14 w-24 bg-gray-200 p-5 mx-10 flex justify-center items-center rounded-xl"><i class="fa-solid fa-dharmachakra fa-spin fa-2xl"></i></div>
+        <!------------------- seats------------------ -->
+
+        <div class="flex justify-center flex-col ">
+
+          <div class="mx-10 grid grid-cols-5 gap-5 ">
+
+            <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div class="h-14 w-24 bg-gray-200 p-5 flex justify-center items-center rounded-xl"><i
+              class="fa-solid fa-dharmachakra fa-spin fa-2xl"></i></div>
+
+            <div id="A1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">A1</div>
+            <div id="A2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">A2</div>
+            <div  class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div id="A3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">A3</div>
+            <div id="A4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">A4</div>
+
+            <div id="B1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">B1</div>
+            <div id="B2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">B2</div>
+            <div  class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div id="B3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">B3</div>
+            <div id="B4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">B4</div>
+
+            <div id="C1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">C1</div>
+            <div id="C2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">C2</div>
+            <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div id="C3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">C3</div>
+            <div id="C4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">C4</div>
+
+            <div id="D1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">D1</div>
+            <div id="D2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">D2</div>
+            <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div id="D3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">D3</div>
+            <div id="D4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">D4</div>
+
+            <div id="E1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">E1</div>
+            <div id="E2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">E2</div>
+            <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div id="E3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">E3</div>
+            <div id="E4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">E4</div>
+
+            <div id="F1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">F1</div>
+            <div id="F2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">F2</div>
+            <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div id="F3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">F3</div>
+            <div id="F4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">F4</div>
+
+            <div id="G1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">G1</div>
+            <div id="G2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">G2</div>
+            <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div id="G3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">G3</div>
+            <div id="G4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">G4</div>
+
+            <div id="H1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">H1</div>
+            <div id="H2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">H2</div>
+            <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div id="H3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">H3</div>
+            <div id="H4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">H4</div>
+
+            <div id="I1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">I1</div>
+            <div id="I2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">I2</div>
+            <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div id="I3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">I3</div>
+            <div id="I4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">I4</div>
+
+            <div id="J1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">J1</div>
+            <div id="J2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">J2</div>
+            <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
+            <div id="J3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">J3</div>
+            <div id="J4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">J4</div>
+          </div>
+        </div>
       </div>
-      <div>
+
+      <!-- coupon Apply container -->
+      <div class="m-10">
         
-      </div>
-    </section>   
+        <h3 class="text-2xl font-bold mb-5">Your Total Price</h3>
+        <div class="bg-slate-100 p-5 rounded-xl">
 
-    
+          <div class="flex gap-3 justify-center items-center mb-5 ">
+            <h4 class="text-xl font-bold">Selected Seat</h4>
+            <div class="p-1 bg-[#14e121] rounded-full text-white font-bold">0</div>
+          </div>
+
+          <!-- blank div -->
+          <div id="blank-div" class="h-32 p-3 bg-white mb-5 rounded-xl">
+            <div class="flex justify-around ">
+              <h5 class="text-sm font-bold">Seat</h5>
+              <h5 class="text-sm font-bold">Type</h5>
+              <h5 class="text-sm font-bold">Price</h5>
+            </div>
+            
+          </div>
+
+          <div class="flex justify-between">
+            <h4 class="text-md font-bold">Total Price</h4>
+            <p class="text-md font-bold">BDT <span id="total-Price">0</span></p>
+          </div>
+          <div class="my-5 gap-2">
+            <input type="text" placeholder="Have any coupon?" class="p-3 rounded-xl border-2 border-gray-200">
+            <button class="btn text-white font-bold bg-[#09d72b]">Apply</button>
+          </div>
+          <div class="flex justify-between mb-2 border-b-2 border-gray-300 border-dashed">
+            <h4 class="text-md font-bold">Discount Price</h4>
+            <p class="text-md font-bold">BDT <span id="discount-price">0</span> </p>
+          </div>
+          <div class="flex justify-between">
+            <h4 class="text-md font-bold">Grand Total</h4>
+            <p class="text-md font-bold">BDT <span id="grand-total-price">0</span></p>
+          </div>
+        </div>
+        
+        <!-- passenger information container -->
+        <div>
+          <div>
+            <h4 class="text-md font-bold mt-8 mb-2">Passenger Name</h4>
+            <input type="text" placeholder="Enter your name." class="p-3 rounded-xl border-2 border-gray-200 w-full">
+          </div>
+          <div>
+            <h4 class="text-md font-bold mt-8 mb-2">Phone Number</h4>
+            <input type="number" placeholder="Enter your phone number." class="p-3 rounded-xl border-2 border-gray-200 w-full">
+          </div>
+          <div>
+            <h4 class="text-md font-bold mt-8 mb-2">Email Id</h4>
+            <input type="email" placeholder="Enter your email." class="p-3 rounded-xl border-2 border-gray-200 w-full">
+          </div>
+
+          <div class="flex justify-center items-center mt-24"><img class="h-40" src="images/fare.png" alt=""></div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- success section -->
+    <section class="p-24 flex justify-center items-center  bg-gray-200 mx-24 mt-24 rounded-xl">
+      <div class=" p-10 bg-white rounded-xl flex justify-center items-center flex-col gap-5">
+        <img src="images/success.png" alt="">
+        <h2 class="text-2xl font-bold text-[#14e121]">SUCCESS</h2>
+        <p class=" text-sm font-bold">Thank you for Booking Our Bus Seats.
+          We are working hard to find the best service and deals for you. </p>
+        <p class="text-sm text-gray-400">Shortly you will find a confirmation in your email</p>  
+        <button class="p-2 w-full rounded-full text-white font-bold bg-[#14e121]">Continue</button>
+      </div>
+    </section>
+
 
   </main>
+
+  <footer class="h-80 bg-black"> 
+
+  </footer>
 </body>
 
 </html>
