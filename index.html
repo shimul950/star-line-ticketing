@@ -36,7 +36,7 @@
 </head>
 
 <body>
-  <header class="mx-24">
+  <header id="header" class="mx-24">
     <nav>
       <div class="navbar bg-base-100">
         <div class="navbar-start">
@@ -69,8 +69,8 @@
           </ul>
         </div>
         <div class="navbar-end">
-          <a class="btn  border-[#09d72b] text-[#09d72b]">Bus <i class="fa-solid fa-bus"
-              style="color: #09d72b;"></i></a>
+          <button onclick="buy()" class="btn  border-[#09d72b] text-[#09d72b]">Bus <i class="fa-solid fa-bus"
+              style="color: #09d72b;"></i></button>
         </div>
       </div>
     </nav>
@@ -84,14 +84,15 @@
             Yes, you can run unit tests and view the results directly within the app. The integrated testing features
             allow for a streamlined .
           </p>
-          <button class="btn bg-[#09d72b] font-bold">Buy Tickets</button>
+          <button onclick="buy()" class="btn bg-[#09d72b] font-bold">Buy Tickets</button>
         </div>
       </div>
     </div>
 
   </header>
 
-  <section class="mx-24">
+  <!-- coupon section -->
+  <section id="coupon" class="mx-24">
     <h1 class="text-4xl font-bold text-center my-20">Best offers for you</h1>
     <!-- coupon container -->
     <div class="flex w-full flex-col lg:flex-row mb-8 gap-10 ">
@@ -103,7 +104,7 @@
         </div>
         <div> <img src="images/cupon-devider.png"  alt=""></div>
         <div>
-          <h1 class="text-4xl font-bold">NEW15</h1>
+          <h1 id="new15-coupon" class="text-4xl font-bold">NEW15</h1>
           <p class="font-bold text-slate-600">Coupon Code</p>
         </div>
       </div>
@@ -115,7 +116,7 @@
         </div>
         <div> <img src="images/cupon-devider.png"  alt=""></div>
         <div>
-          <h1 class="text-4xl font-bold">Couple20</h1>
+          <h1 id="couple-coupon" class="text-4xl font-bold">Couple20</h1>
           <p class="font-bold text-slate-600">Coupon Code</p>
         </div>
       </div>
@@ -126,7 +127,7 @@
     </div>
   </section>
 
-  <main class="border-t-2 border-[#09d72b] bg-slate-100 pb-24">
+  <main id="main" class="border-t-2 border-[#09d72b] bg-slate-100 pb-24 ">
     <!-- route and price confirmation section -->
     <section class="m-24">
       <h1 class="text-4xl font-bold text-center">Star Line Paribahan</h1>
@@ -141,7 +142,7 @@
               <h3 class="text-2xl font-bold">Star Line Paribahan</h3>
               <p class="text-slate-500 ">Coach-009-WEB ! AC_Business</p>
             </div>
-            <button class="btn  border-[#09d72b] text-[#09d72b]"> <i class="fa-solid fa-bus" style="color: #09d72b;"> 40 seats left</i></button>
+            <button class="btn  border-[#09d72b] text-[#09d72b]"> <i class="fa-solid fa-bus" style="color: #09d72b;"> <span id="seatLeft">40</span> seats left</i></button>
           </div>
           <div class="my-8 bg-slate-100 p-10 rounded-xl">
             <input type="text" placeholder="Route" class="border-b-2 p-5 border-dashed rounded-xl w-1/2"><br>
@@ -167,7 +168,7 @@
     </section>
 
     <!-- seat selection section -->
-    <section class="bg-white mx-24 pt-2 rounded-xl grid grid-cols-3 py-10">
+    <section id="seat-selection" class="bg-white mx-24 pt-2 rounded-xl grid grid-cols-3 py-10">
       <!-- seating container div -->
       <div class="col-span-2 border-r-2 border-dashed">
         <!-- available seat indicator div -->
@@ -193,65 +194,65 @@
             <div class="h-14 w-24 bg-gray-200 p-5 flex justify-center items-center rounded-xl"><i
               class="fa-solid fa-dharmachakra fa-spin fa-2xl"></i></div>
 
-            <div id="A1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">A1</div>
-            <div id="A2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">A2</div>
+            <div id="A1" onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">A1</div>
+            <div id="A2"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">A2</div>
             <div  class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
-            <div id="A3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">A3</div>
-            <div id="A4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">A4</div>
+            <div id="A3"  onclick="selectSeat(this)"  class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">A3</div>
+            <div id="A4"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">A4</div>
 
-            <div id="B1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">B1</div>
-            <div id="B2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">B2</div>
+            <div id="B1"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">B1</div>
+            <div id="B2"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">B2</div>
             <div  class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
-            <div id="B3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">B3</div>
-            <div id="B4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">B4</div>
+            <div id="B3"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">B3</div>
+            <div id="B4"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">B4</div>
 
-            <div id="C1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">C1</div>
-            <div id="C2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">C2</div>
+            <div id="C1"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">C1</div>
+            <div id="C2"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">C2</div>
             <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
-            <div id="C3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">C3</div>
-            <div id="C4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">C4</div>
+            <div id="C3"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">C3</div>
+            <div id="C4"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">C4</div>
 
-            <div id="D1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">D1</div>
-            <div id="D2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">D2</div>
+            <div id="D1"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">D1</div>
+            <div id="D2"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">D2</div>
             <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
-            <div id="D3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">D3</div>
-            <div id="D4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">D4</div>
+            <div id="D3"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">D3</div>
+            <div id="D4"   onclick="selectSeat(this)"class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">D4</div>
 
-            <div id="E1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">E1</div>
-            <div id="E2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">E2</div>
+            <div id="E1"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">E1</div>
+            <div id="E2"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">E2</div>
             <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
-            <div id="E3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">E3</div>
-            <div id="E4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">E4</div>
+            <div id="E3"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">E3</div>
+            <div id="E4"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">E4</div>
 
-            <div id="F1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">F1</div>
-            <div id="F2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">F2</div>
+            <div id="F1"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">F1</div>
+            <div id="F2"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">F2</div>
             <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
-            <div id="F3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">F3</div>
-            <div id="F4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">F4</div>
+            <div id="F3"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">F3</div>
+            <div id="F4"   onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">F4</div>
 
-            <div id="G1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">G1</div>
-            <div id="G2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">G2</div>
+            <div id="G1"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">G1</div>
+            <div id="G2"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">G2</div>
             <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
-            <div id="G3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">G3</div>
-            <div id="G4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">G4</div>
+            <div id="G3"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">G3</div>
+            <div id="G4"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">G4</div>
 
-            <div id="H1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">H1</div>
-            <div id="H2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">H2</div>
+            <div id="H1"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">H1</div>
+            <div id="H2"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">H2</div>
             <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
-            <div id="H3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">H3</div>
-            <div id="H4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">H4</div>
+            <div id="H3"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">H3</div>
+            <div id="H4"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">H4</div>
 
-            <div id="I1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">I1</div>
-            <div id="I2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">I2</div>
+            <div id="I1"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">I1</div>
+            <div id="I2"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">I2</div>
             <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
-            <div id="I3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">I3</div>
-            <div id="I4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">I4</div>
+            <div id="I3"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">I3</div>
+            <div id="I4"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">I4</div>
 
-            <div id="J1" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">J1</div>
-            <div id="J2" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">J2</div>
+            <div id="J1"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">J1</div>
+            <div id="J2"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">J2</div>
             <div class="h-14 w-24 p-5 flex justify-center items-center rounded-xl"></div>
-            <div id="J3" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">J3</div>
-            <div id="J4" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">J4</div>
+            <div id="J3"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">J3</div>
+            <div id="J4"  onclick="selectSeat(this)" class="h-14 w-24 p-5 bg-slate-100 flex justify-center items-center rounded-xl">J4</div>
           </div>
         </div>
       </div>
@@ -264,7 +265,7 @@
 
           <div class="flex gap-3 justify-center items-center mb-5 ">
             <h4 class="text-xl font-bold">Selected Seat</h4>
-            <div class="p-1 bg-[#14e121] rounded-full text-white font-bold">0</div>
+            <div id="selected-seat" class="p-1 bg-[#14e121] rounded-full text-white font-bold">0</div>
           </div>
 
           <!-- blank div -->
@@ -279,11 +280,12 @@
 
           <div class="flex justify-between">
             <h4 class="text-md font-bold">Total Price</h4>
-            <p class="text-md font-bold">BDT <span id="total-Price">0</span></p>
+            <p class="text-md font-bold">BDT <span id="total-price">0</span></p>
           </div>
+          <!-- coupon apply -->
           <div class="my-5 gap-2">
-            <input type="text" placeholder="Have any coupon?" class="p-3 rounded-xl border-2 border-gray-200">
-            <button class="btn text-white font-bold bg-[#09d72b]">Apply</button>
+            <input type="text" id="coupon-input" placeholder="Have any coupon?" class="p-3 rounded-xl border-2 border-gray-200">
+            <button id="apply-btn" class="btn text-white font-bold bg-[#09d72b]">Apply</button>
           </div>
           <div class="flex justify-between mb-2 border-b-2 border-gray-300 border-dashed">
             <h4 class="text-md font-bold">Discount Price</h4>
@@ -299,16 +301,18 @@
         <div>
           <div>
             <h4 class="text-md font-bold mt-8 mb-2">Passenger Name</h4>
-            <input type="text" placeholder="Enter your name." class="p-3 rounded-xl border-2 border-gray-200 w-full">
+            <input id="passenger-name" type="text" placeholder="Enter your name." class="p-3 rounded-xl border-2 border-gray-200 w-full">
           </div>
           <div>
             <h4 class="text-md font-bold mt-8 mb-2">Phone Number</h4>
-            <input type="number" placeholder="Enter your phone number." class="p-3 rounded-xl border-2 border-gray-200 w-full">
+            <input id="passenger-number" type="number" placeholder="Enter your phone number." class="p-3 rounded-xl border-2 border-gray-200 w-full">
           </div>
           <div>
             <h4 class="text-md font-bold mt-8 mb-2">Email Id</h4>
-            <input type="email" placeholder="Enter your email." class="p-3 rounded-xl border-2 border-gray-200 w-full">
+            <input id="passenger-email" type="email" placeholder="Enter your email." class="p-3 rounded-xl border-2 border-gray-200 w-full">
           </div>
+
+          <button id="next-btn" class="btn w-full rounded-xl bg-[#14e121] text-white my-8 font-bold">Next</button>
 
           <div class="flex justify-center items-center mt-24"><img class="h-40" src="images/fare.png" alt=""></div>
         </div>
@@ -318,7 +322,7 @@
 
 
     <!-- success section -->
-    <section class="p-24 flex justify-center items-center  bg-gray-200 mx-24 mt-24 rounded-xl">
+    <section id="success" class="p-24 flex justify-center items-center  bg-gray-200 mx-24 mt-24 rounded-xl hidden">
       <div class=" p-10 bg-white rounded-xl flex justify-center items-center flex-col gap-5">
         <img src="images/success.png" alt="">
         <h2 class="text-2xl font-bold text-[#14e121]">SUCCESS</h2>
@@ -335,6 +339,9 @@
   <footer class="h-80 bg-black"> 
 
   </footer>
+
+  <script src="utility.js"></script>
+  <script src="ticketing.js"></script>
 </body>
 
 </html>
